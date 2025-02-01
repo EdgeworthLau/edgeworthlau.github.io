@@ -1,3 +1,41 @@
 /* start custom scss snippet */
 
+
+@font-face {
+  font-family: "MiSans";
+  src: url("../assets/fonts/MiSans-Light.ttf");
+}
+
+
+body {
+  font-family: MiSans, sans-serif;
+}
+
+p {
+  font-size: 16px;
+}
+
+code {
+  font-size: 16px;
+}
+
+.article__content {
+  font-size: 16px;
+}
+
+.page__main .col-aside>aside {
+  position: absolute;
+  width: 0;
+  overflow: hidden
+}
+
+.has-aside .col-aside {
+  position: relative;
+  display: block;
+  width: 0
+}
+
+.has-aside .main {
+  max-width: 950px
+}
 /* end custom scss snippet */
