@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // 创建复制按钮
     let button = document.createElement('button');
-    button.innerHTML = '<i class="fa fa-camera-retro fa-lg" aria-hidden="true"></i>';
+    button.innerHTML = '<i class="fa fa-clone" aria-hidden="true"></i>';
     button.classList.add('copy-button'); // 添加 CSS 类
 
     // 将按钮插入到 <code> 元素后面
