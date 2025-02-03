@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
-  let codeBlocks = document.getElementsByTagName('code');
+  let allCodeBlocks = document.getElementsByTagName('code');
+  let codeBlocks = Array.from(allCodeBlocks).filter(codeElement => codeElement.parentElement.tagName === 'pre');
 
   for (let i = 0; i < codeBlocks.length; i++) {
     let codeBlock = codeBlocks[i];
