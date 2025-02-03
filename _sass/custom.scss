@@ -1,5 +1,6 @@
 /* start custom scss snippet */
 
+@import url('https://static.zeoseven.com/zsft/214/main/result.css');
 
 @font-face {
   font-family: "MiSans";
@@ -8,7 +9,8 @@
 
 
 body {
-  font-family: MiSans, sans-serif;
+  font-family: "Sarasa UI SC";
+  font-weight: normal;
 }
 
 p {
