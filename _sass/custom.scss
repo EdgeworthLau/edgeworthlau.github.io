@@ -40,4 +40,14 @@ code {
 .has-aside .main {
   max-width: 950px
 }
+
+div.highlight {
+  position: relative;
+}
+
+div.highlight .copy-button {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
 /* end custom scss snippet */
