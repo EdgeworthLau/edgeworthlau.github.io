@@ -1,0 +1,107 @@
+/* start custom scss snippet */
+
+@import url('https://static.zeoseven.com/zsft/214/main/result.css');
+@import url('https://static.zeoseven.com/zsft/159/main/result.css');
+
+// font settings
+
+body {
+  font-family: "Sarasa UI SC";
+  font-weight: normal;
+  text-align: justify;
+}
+
+p {
+  font-size: 18px;
+}
+
+code {
+  font-size: 18px;
+  font-family: "Sarasa Mono SC", monospace;
+}
+
+input, button {
+  font-family: "Sarasa UI SC";
+}
+
+.article__content {
+  font-size: 18px;
+}
+
+.article-list .item__meta {
+  font-family: "Sarasa Mono SC";
+}
+
+// article page width settings
+
+.page__main .col-aside>aside {
+  position: absolute;
+  width: 0;
+  overflow: hidden
+}
+
+.has-aside .col-aside {
+  position: relative;
+  display: block;
+  width: 0
+}
+
+.has-aside .main {
+  max-width: 950px
+}
+
+// copy button settings
+
+div.highlight {
+  position: relative;
+}
+
+div.highlight .copy-button {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+
+// category list settings
+
+.category-head {
+  border: 0 solid rgb(229.5, 229.5, 229.5);
+  border-bottom-width: 1px;
+  margin-bottom: 16px;
+}
+
+.category-list {
+  font-size: 1.2rem;
+  margin: 8px 0 !important;
+}
+
+// archive list settings
+
+.article-list__group-header {
+  border: 0 solid rgb(229.5, 229.5, 229.5);
+  border-bottom-width: 1px;
+}
+
+// search box settings
+
+.modal {
+  background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+}
+
+.search-result__header {
+  font-size: 1.9rem;
+  border: 0 solid rgb(229.5, 229.5, 229.5);
+  border-bottom-width: 1px;
+  margin-bottom: 16px;
+}
+
+.search-result__item {
+  font-size: 1.2rem;
+  margin: 8px 0;
+  a {
+    color: white;
+  }
+}
+
+
+/* end custom scss snippet */

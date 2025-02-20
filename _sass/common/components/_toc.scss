@@ -1,0 +1,174 @@
+ul.toc {
+  display: block;
+  margin: 0;
+  color: $text-color;
+  list-style-type: none;
+  & > li {
+    margin: map-get($spacers, 1) / 2 0;
+    a {
+      display: inline-block;
+      margin: map-get($spacers, 1) / 4 0;
+      text-decoration: none !important;
+    }
+  }
+  .toc-h1,
+  .toc-h2,
+  .toc-h3,
+  .toc-h4,
+  .toc-h5,
+  .toc-h6 {
+    a {
+      @include link-colors($text-color, $main-color-1);
+      white-space: nowrap; 
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 100%;
+    }
+    &.active {
+      a {
+        @include link-colors($main-color-1);
+      }
+    }
+  }
+
+  .toc-h3,
+  .toc-h4 {
+    &, a {
+      font-size: map-get($base, font-size-toc-sm);
+      font-weight: map-get($base, font-weight);
+      line-height: map-get($base, line-height-sm);
+    }
+  }
+  .toc-h5,
+  .toc-h6 {
+    &, a {
+      font-size: map-get($base, font-size-toc-xs);
+      font-weight: map-get($base, font-weight);
+      line-height: map-get($base, line-height-xs);
+    }
+  }
+  .toc-h1 {
+    @include split-line(bottom);
+    padding: map-get($spacers, 2) 0 map-get($spacers, 1) 0;
+    margin-bottom: map-get($spacers, 2);
+    color: $text-color-d;
+    &, a {
+      font-size: map-get($base, font-size-toc-lg);
+      font-weight: map-get($base, font-weight-bold);
+      line-height: map-get($base, line-height-sm);
+    }
+    a {
+      @include link-colors($text-color-d, $main-color-1);
+    }
+  }
+  .toc-h2 {
+    @include split-line(bottom);
+    // padding: map-get($spacers, 2) 0 map-get($spacers, 1) 0;
+    padding: map-get($spacers, 1) 0 0 0;
+    margin-bottom: map-get($spacers, 1);
+    color: $text-color-d;
+    &, a {
+      font-size: map-get($base, font-size-toc-lg);
+      font-weight: map-get($base, font-weight-bold);
+      line-height: map-get($base, line-height-sm);
+    }
+    a {
+      @include link-colors($text-color-d, $main-color-1);
+    }
+  }
+  .toc-h3 {
+    &, a {
+      font-weight: map-get($base, font-weight-mid);
+    }
+    margin-left: map-get($spacers, 3);
+  }
+  .toc-h4 {
+    margin-left: map-get($spacers, 3) * 2;
+  }
+  .toc-h5 {
+    margin-left: map-get($spacers, 3) * 3;
+  }
+  .toc-h6 {
+    margin-left: map-get($spacers, 3) * 4;
+  }
+  .toc-h6 {
+    color: $text-color-l;
+    a {
+      @include link-colors($text-color-l, $main-color-1);
+    }
+  }
+}
+
+ul.toc--ellipsis {
+  & > li {
+    @include overflow(hidden);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 90%;
+  }
+  height: 80vh;
+  overflow: hidden;
+}
+
+.toc--ellipsis::-webkit-scrollbar-track {
+    // border-radius: 8px;
+    display: none;
+};
+.toc--ellipsis::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.25);
+    background: rgba(255,255,255,0.1);
+
+};
+.toc--ellipsis::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(255,255,255,0.6);
+};
+.toc--ellipsis::-webkit-scrollbar {
+    width: 8px;
+};
+
+ul.toc--ellipsis:hover {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+ul.toc--navigator {
+  & > li {
+    &.active {
+      a {
+        margin-left: -4px;
+        @include split-line(left, 4px, $main-color-1);
+      }
+    }
+  }
+  .toc-h2,
+  .toc-h3,
+  .toc-h4 {
+    a {
+        padding-left: map-get($spacers, 2);
+        margin: map-get($spacers, 1) 0;
+        @include link-colors($text-color-l);
+    }
+    color: $text-color-l;
+  }
+  .toc-h1 {
+    &, a {
+      font-size: map-get($base, font-size);
+      line-height: map-get($base, line-height);
+    }
+    color: $text-color;
+    a {
+      @include link-colors($text-color-d);
+    }
+  }
+  .toc-h2 {
+    &, a {
+      font-size: map-get($base, font-size-sm);
+      font-weight: map-get($base, font-weight-bold);
+      line-height: map-get($base, line-height-sm);
+    }
+    border: initial;
+    padding: initial;
+    margin-bottom: initial;
+  }
+}

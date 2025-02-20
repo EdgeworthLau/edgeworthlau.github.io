@@ -1,0 +1,9 @@
+header:
+  - title: Categories
+    url: /categories/
+
+  - title: Archive
+    url: /archive
+
+  - title: About
+    url: /about
